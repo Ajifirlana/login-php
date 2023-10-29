@@ -35,17 +35,19 @@ if (isset($_POST['submit'])) {
     <title>Niagahoster Tutorial</title>
 </head>
 <body>
-    <div class="container">
+    <div class="kotak_login">
         <form action="" method="POST" class="login-email">
-            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Login</p>
+            <p class="tulisan_login" style="font-size: 2rem; font-weight: 800;">Login</p>
             <div class="input-group">
-                <input type="email" placeholder="Email" name="email" required>
+                <label>Email</label>
+                <input type="email" placeholder="Email" class="form_login" name="email" required>
             </div>
             <div class="input-group">
-                <input type="password" placeholder="Password" name="password" required>
+            <label>Password</label>
+                <input type="password" placeholder="Password" class="form_login"name="password" required>
             </div>
             <div class="input-group">
-                <button name="submit" class="btn">Login</button>
+                <button name="submit" class="tombol_login">Login</button>
             </div>
             <p class="login-register-text">Anda belum punya akun? <a href="register.php">Register</a></p>
         </form>
