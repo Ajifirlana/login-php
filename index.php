@@ -16,7 +16,8 @@ if (isset($_POST['submit'])) {
  
     if ($result->num_rows > 0) {
         $row = mysqli_fetch_assoc($result);
-        $_SESSION['username'] = $row['email'].'Wa:089531941653';
+        $_SESSION['username'] = $row['email'];
+        $_SESSION['no_hp'] ='Wa:089531941653';
         header("Location: berhasil_login.php");
         exit();
     } else {

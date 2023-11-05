@@ -17,14 +17,12 @@ if (!isset($_SESSION['username'])) {
     <title>Berhasil Login</title>
 </head>
 <body>
-    <div class="container-logout">
-        <form action="logout.php" method="POST" class="login-email">
-            <h1>Selamat Datang, <p><?php echo $_SESSION['username']; ?></p></h1>
-            <div class="input-group">
-                <button type="submit" class="btn">Logout</button>
-            </div>
-        </form>
-        <table border="1">
+<div class="kotak_login">
+	
+<h1>Selamat Datang, <p><?php echo $_SESSION['username']; ?></p>
+<?php echo $_SESSION['no_hp']; ?>
+</h1>
+<table border="1">
 		<tr>
 			<th>NO</th>
 			<th>Nama</th>
@@ -52,6 +50,16 @@ if (!isset($_SESSION['username'])) {
 		}
 		?>
 	</table>
+	<form action="logout.php" method="POST" class="login-email">
+            <div align="center" class="input-group">
+				<p>
+                <button type="submit" class="btn">Logout</button>
+            </div>
+        </form>
+       
+    </div>
+    <div class="container-logout">
+        
     </div>
 </body>
 </html>
