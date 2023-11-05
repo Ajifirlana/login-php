@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Okt 2023 pada 08.48
+-- Waktu pembuatan: 05 Nov 2023 pada 10.24
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.5
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `belajar`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `mahasiswa`
+--
+
+CREATE TABLE `mahasiswa` (
+  `nama` varchar(15) NOT NULL,
+  `nim` int(11) NOT NULL,
+  `alamat` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `mahasiswa`
+--
+
+INSERT INTO `mahasiswa` (`nama`, `nim`, `alamat`) VALUES
+('AJI FIRLANA', 471, 'JAMBI');
 
 -- --------------------------------------------------------
 
@@ -43,6 +62,12 @@ INSERT INTO `users` (`id`, `email`, `password`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `mahasiswa`
+--
+ALTER TABLE `mahasiswa`
+  ADD PRIMARY KEY (`nim`) USING BTREE;
 
 --
 -- Indeks untuk tabel `users`
